@@ -87,3 +87,18 @@ export function caesarCipher(string, shift) {
 	return newString;
 }
 
+export function analizeArray(array) {
+	if (!Array.isArray(array)) {
+		throw new Error("The input is not an array");
+	}
+
+	return {
+		average:
+			array.length > 0
+				? array.reduce((prev, cur) => prev + cur, 0) / array.length
+				: null,
+		min: array.length > 0 ? Math.min(...array) : null,
+		max: array.length > 0 ? Math.max(...array) : null,
+		length: array.length,
+	};
+}

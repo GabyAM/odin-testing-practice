@@ -3,6 +3,7 @@ import {
 	reverseString,
 	calculator,
 	caesarCipher,
+	analizeArray,
 } from "./index.js";
 
 it("capitalize function works", () => {
