@@ -51,3 +51,22 @@ describe("calculator fails", () => {
 		});
 	});
 });
+
+it("caesarCipher function works (normal case)", () => {
+	expect(caesarCipher("caesar", 3)).toBe("fdhvdu");
+});
+
+it("caesarCipher function works (edge case)", () => {
+	expect(caesarCipher("zombie", 5)).toBe("etrgnj");
+});
+
+it("caesarCipher function fails when first parameter is not string", () => {
+	expect(() => caesarCipher(12, 3)).toThrow("Input a valid string");
+});
+
+it("caesarCipher function fails when shift is not a number", () => {
+	expect(() => caesarCipher("caesar", "three")).toThrow(
+		"The shift parameter should be a number"
+	);
+});
+
