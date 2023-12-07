@@ -71,3 +71,24 @@ it("caesarCipher function fails when shift is not a number", () => {
 	);
 });
 
+it("analizeArray function works", () => {
+	expect(analizeArray([5, 20, 15, 25, 10])).toEqual({
+		average: 15,
+		min: 5,
+		max: 25,
+		length: 5,
+	});
+});
+
+it("analizeArray function works (edge case)", () => {
+	expect(analizeArray([])).toEqual({
+		average: null,
+		min: null,
+		max: null,
+		length: 0,
+	});
+});
+
+it("analizeArray function fails when no array is provided", () => {
+	expect(() => analizeArray("hi")).toThrow("The input is not an array");
+});
