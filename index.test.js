@@ -2,6 +2,7 @@ import {
 	capitalize,
 	reverseString,
 	calculator,
+	caesarCipher,
 } from "./index.js";
 
 it("capitalize function works", () => {

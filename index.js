@@ -37,3 +37,53 @@ export const calculator = {
 	},
 };
 
+const abecedary = [
+	"a",
+	"b",
+	"c",
+	"d",
+	"e",
+	"f",
+	"g",
+	"h",
+	"i",
+	"j",
+	"k",
+	"l",
+	"m",
+	"n",
+	"o",
+	"p",
+	"q",
+	"r",
+	"s",
+	"t",
+	"u",
+	"v",
+	"w",
+	"x",
+	"y",
+	"z",
+];
+
+export function caesarCipher(string, shift) {
+	if (typeof string !== "string" || !string instanceof String)
+		throw new Error("Input a valid string");
+	if (typeof shift !== "number")
+		throw new Error("The shift parameter should be a number");
+
+	let newString = "";
+	for (let i = 0; i < string.length; i++) {
+		let abecedaryIndex = abecedary.indexOf(string[i]);
+		abecedaryIndex += shift;
+		if (abecedaryIndex < 0) {
+			const difference = 0 - abecedaryIndex;
+			abecedaryIndex += difference;
+		} else if (abecedaryIndex >= abecedary.length) {
+			abecedaryIndex = abecedaryIndex - abecedary.length;
+		}
+		newString += abecedary[abecedaryIndex];
+	}
+	return newString;
+}
+
