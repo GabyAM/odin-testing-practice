@@ -12,3 +12,28 @@ export function reverseString(string) {
 	}
 	return newString;
 }
+
+export const calculator = {
+	add: (a, b) => {
+		if (typeof a !== "number" || typeof b !== "number")
+			throw new Error("The parameters are not numbers");
+		return a + b;
+	},
+	substract: (a, b) => {
+		if (typeof a !== "number" || typeof b !== "number")
+			throw new Error("The parameters are not numbers");
+		return a - b;
+	},
+	multiply: (a, b) => {
+		if (typeof a !== "number" || typeof b !== "number")
+			throw new Error("The parameters are not numbers");
+		return a * b;
+	},
+	divide: (a, b) => {
+		if (typeof a !== "number" || typeof b !== "number")
+			throw new Error("The parameters are not numbers");
+		if (b === 0) throw new Error("can't divide by 0");
+		return a / b;
+	},
+};
+

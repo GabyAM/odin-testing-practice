@@ -1,4 +1,8 @@
-import { capitalize, reverseString } from "./index.js";
+import {
+	capitalize,
+	reverseString,
+	calculator,
+} from "./index.js";
 
 it("capitalize function works", () => {
 	expect(capitalize("word")).toBe("Word");
