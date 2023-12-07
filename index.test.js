@@ -1,3 +1,4 @@
+import { capitalize } from "./index.js";
 
 it("capitalize function works", () => {
 	expect(capitalize("word")).toBe("Word");
